@@ -43,17 +43,41 @@ Kyper-V
 常见的平台虚拟化技术概念的区别
 ------------------------------
 
-qemu
-VMware
 Xen
 KVM
+上面两种都是实现平台虚拟化的一种底层实现
+
+qemu
+这个也是一种 平台虚拟化的 实现, 这种实现 是 从底层到上层的,有底层 ,也有app
+
+VMware
 Kyper-V
+
 qemu-kvm
-virsh
+这个是 kvm 上层的 app ,修改自qemu,可以控制 对平台的虚拟化
+
 libvirt
+这是是一个接口,位于 app 和 平台虚拟化的 底层实现 之间,可以 接口 Xen 和 KVM
+Libvirt是管理虚拟机和其他虚拟化功能，比如存储管理，网络管理的软件集合。它包括一个API库，一个守护程序（libvirtd）和一个命令行工具（virsh）
+
+virsh
+这是利用libvirt api库 做的 一个 app
+
+virsh 命令，它是一个基于 libvirt 的命令套件，为创建和管理 libvirt 使用的所有对象—虚拟机（域）、存储卷、存储池、网络、网络接口、设备等提供了各个子命令。
+
+virt-install
+virt-install 命令，这是一个基于 libvirt api库  的命令，从名称可以看出，其设计宗旨是帮助从命令行创建虚拟机。
+
+
 libvirtd
+是libvirtd 的一部分
 
 `虚拟化技术漫谈`_
 ----
+
+`Linux 虚拟化技术`_
+----------------------
+
+.. _`Linux 虚拟化技术`: https://www.ibm.com/developerworks/cn/linux/theme/virtualization/
 
 .. _`虚拟化技术漫谈`: https://www.ibm.com/developerworks/cn/linux/l-cn-vt/
