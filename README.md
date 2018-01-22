@@ -36,3 +36,9 @@
      
 ```
 
+##前提
+```c
+pip3 install -r requirements.txt
+
+```
+
